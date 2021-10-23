@@ -13,6 +13,13 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
    
     <title>PNI Dashboard</title>
+    <style type ="text/css">
+        .chartBox {
+            width: 900px;
+            height: 350px;
+        };
+    
+     </style>
 </head>
 <body>
     <div class="leftmost_bar white card"></div>
@@ -196,7 +203,9 @@
     <div class="modal-position">
         <div class="tch-modal card modal">
             <i class='bx bx-exit closeBtn'></i>
-            <canvas id="tch-graph" class="graphBox"></canvas>
+                <div class ="chartBox">
+                    <canvas id="tch-graph"></canvas>
+                </div>
         </div>
 
         <div class="sdcch-modal card modal">

@@ -334,9 +334,9 @@ body {
 .modal {
     width: 80%;
     height: 70%;
-    background: var(--blue);
+    background: var(--white);
     padding: 30px;
-    color: var(--white);
+    color: var(--blue);
     font-size: 15px;
 }
 
@@ -345,7 +345,7 @@ body {
     left: 20px;
     font-size: 30px;
     cursor: pointer;
-    color: var(--white)
+    color: var(--blue)
 }
 
 @keyframes fade {

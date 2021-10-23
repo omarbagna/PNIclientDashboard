@@ -1,27 +1,45 @@
-let tchChart = document.getElementById('tch-graph').getContext('2d');
+//Global option 
+// setup
+const data = {
+    labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Campbridge', 'New Bedford'],
+    datasets:[{
+        label: 'Population',
+        data: [
+            617594,
+            1811045,
+            153060,
+            106519,
+            105162,
+            95072
+        ],
+        borderColor: '#72ebba',
+        tension: 0.5
+    }]
+};
 
-let tchCongestion = new Chart(tchChart, {
+// config
+const config = {
     type: 'line',
-    data: {
-        labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Campbridge', 'New Bedford'],
-        datasets:[{
-            label: 'Population',
-            data: [
-                617594,
-                1811045,
-                153060,
-                106519,
-                105162,
-                95072
-            ],
-            borderColor: '#72ebba',
-            tension: 0.5
-        }]
-    },
+    data,
     options: {
-        layout:{
-            height:500,
-            width:800
+        scales: {
+         y:{ticks:{
+            color:'#4D1ED3'
+         },
+            beginAtZero: true,
+            },
+         x:{ticks:{
+            color:'#4D1ED3'
+            },
+                beginAtZero: true,
+         }
+
         }
     }
-});
+};
+
+// init /render block
+const myChart = new Chart(
+    document.getElementById('tch-graph'),
+    config
+);
