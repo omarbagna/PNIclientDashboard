@@ -13,13 +13,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
    
     <title>PNI Dashboard</title>
-    <style type ="text/css">
-        .chartBox {
-            width: 900px;
-            height: 350px;
-        };
-    
-     </style>
+ 
 </head>
 <body>
     <div class="leftmost_bar white card"></div>
@@ -68,24 +62,28 @@
                         <p class="number">0,03</p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="graphSketch.svg" alt="">
                     </div>
                     <div class="smaller white card sdcch-card">
                         <p class="text">SDCCH <br>CONGESTION</p>
                         <p class="number">0,04</p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="graphSketch.svg" alt="">
                     </div>
                     <div class="smaller white card callDrop-card">
                         <p class="text">CALL DROP <br>RATE</p>
                         <p class="number">0,13</p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="graphSketch.svg" alt="">
                     </div>
                     <div class="smaller white card callConnect-card">
                         <p class="text">CALL CONNECTION <br>SUCCESS RATE</p>
                         <p class="number">99.25%</p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="graphSketch.svg" alt="">
                     </div>
                 </div>
 
@@ -203,21 +201,34 @@
     <div class="modal-position">
         <div class="tch-modal card modal">
             <i class='bx bx-exit closeBtn'></i>
-                <div class ="chartBox">
-                    <canvas id="tch-graph"></canvas>
-                </div>
+            <h4>TCH CONGESTION CHART</h4>
+            <div class ="chartBox">
+                <canvas id="tch-graph" class="chart" aria-label="TCH Chart" role="tch_graph"></canvas>
+            </div>
         </div>
 
         <div class="sdcch-modal card modal">
             <i class='bx bx-exit closeBtn'></i>
+            <h4>SDCCH CONGESTION CHART</h4>
+            <div class ="chartBox">
+                <canvas id="sdcch-graph" class="chart" aria-label="SDCCH Chart" role="sdcch_graph"></canvas>
+            </div>
         </div>
 
         <div class="callDrop-modal card modal">
             <i class='bx bx-exit closeBtn'></i>
+            <h4>CALL DROP RATE CHART</h4>
+            <div class ="chartBox">
+                <canvas id="callDrop-graph" class="chart" aria-label="Call Drop Rate Chart" role="callDrop_graph"></canvas>
+            </div>
         </div>
 
         <div class="callConnect-modal card modal">
             <i class='bx bx-exit closeBtn'></i>
+            <h4>CALL CONNECTION SUCCESS RATE CHART</h4>
+            <div class ="chartBox">
+                <canvas id="callConnect-graph" class="chart" aria-label="Call Connection Chart" role="callConnect_graph"></canvas>
+            </div>
         </div>
     </div>
     
