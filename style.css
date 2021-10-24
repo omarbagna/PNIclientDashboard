@@ -78,7 +78,7 @@ body {
 
 .topbar {
     height: 90px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     /*margin: 0 auto;*/
@@ -94,7 +94,7 @@ body {
 /* MAIN CONTENT STYLE */
 .main {
     height: 88vh;
-    width: 100;
+    width: 100vw;
     position: absolute;
     top: 90px;
     /*left: 80px;*/
