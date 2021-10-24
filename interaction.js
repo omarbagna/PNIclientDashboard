@@ -1,3 +1,4 @@
+// Select all main interactive components
 const menu = document.querySelectorAll('.sidebar a')
 const period = document.querySelectorAll('.period a')
 const tchView = document.querySelector('.tch-card')
@@ -5,7 +6,7 @@ const sdcchView = document.querySelector('.sdcch-card')
 const callDropView = document.querySelector('.callDrop-card')
 const callConnectView = document.querySelector('.callConnect-card')
 
-const closeMode = document.querySelector('.closeBtn')
+const closeMode = document.querySelectorAll('.closeBtn')
 const mainModal = document.querySelector('.modal-position')
 const modalTCH = document.querySelector('.tch-modal')
 const modalSDCCH = document.querySelector('.sdcch-modal')
@@ -13,6 +14,7 @@ const modalCALLdrop = document.querySelector('.callDrop-modal')
 const modalCALLconnect = document.querySelector('.callConnect-modal')
 
 
+// Pass interactive commands to webpage
 period.forEach((item) => item.addEventListener('click', activeSelection));
 menu.forEach((item) => item.addEventListener('click', activeMenu));
 
@@ -21,9 +23,11 @@ sdcchView.addEventListener('click', openSDCCHmodal)
 callDropView.addEventListener('click', openCALLDROPmodal)
 callConnectView.addEventListener('click', openCALLCONNECTmodal)
 window.addEventListener('click',outsideClick)
-closeMode.addEventListener('click',closeModal)
+closeMode.forEach((item) => item.addEventListener('click',closeModal))
 
 
+
+// Functions for interactivity and response
 function activeSelection(){
     period.forEach((item) => item.classList.remove('select-primary'));
     this.classList.add('select-primary');
