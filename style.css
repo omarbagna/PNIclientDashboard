@@ -10,6 +10,7 @@
 :root {
     --white: #fff;
     --blue: #4D1ED3;
+    --blue-alt: #6c3fe7;
     --grey: #A3A3A3;
     --green: #72ebba;
     --black: #19193e;
@@ -17,16 +18,34 @@
     --yellow: #ffa63f;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--black);
     background: #f5f6fa;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-alt);
+    border-radius: .5rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue);
+  }
+
 
 /* REUSABLE STYLES */
 .card {
     border-radius: 5px;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
 }
 
 .white {
@@ -49,22 +68,20 @@ body {
 
 
 /* STATIC BARS */
-.leftmost_bar {
+/*.leftmost_bar {
     width: 80px;
     height: 85vh;
     position: fixed;
     top: 0;
     left: 0;
-}
+}*/
 
 .topbar {
     height: 90px;
-    width: calc(100% - 180px);
-    position: absolute;
-    top: 0;
-    left: 80px;
-    padding-left: 20px;
-    overflow: hidden;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .logo {
@@ -77,11 +94,12 @@ body {
 /* MAIN CONTENT STYLE */
 .main {
     height: 88vh;
-    width: calc(100% - 130px);
+    width: 100;
     position: absolute;
     top: 90px;
-    left: 80px;
-    margin-left: 50px; 
+    /*left: 80px;*/
+    margin-left: 50px;
+    box-sizing: border-box; 
 }
 
 /* TITLE  TEXT STYLE */
@@ -169,18 +187,22 @@ body {
     position: relative;
     height: 130px;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
+    padding-right: 0px;
 }
 
 .monitoring_bar h4 {
     color: var(--grey);
+    margin-left: 20px;
 }
 
 .monitoring_bar .btn-row {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 70px;
     margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .monitoring_bar .btn {
@@ -331,7 +353,7 @@ body {
     width: 120px;
     position: relative;
     top: -75px;
-    left: 90px;
+    left: 70px;
 }
 
 .modal-position {
@@ -340,13 +362,12 @@ body {
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
     z-index: -10;
 }
 
 .modal {
-    width: 65%;
-    height: 70%;
+    width: 1100px;
+    height: 600px;
     background: var(--white);
     padding: 30px;
     color: var(--blue);
@@ -371,15 +392,6 @@ body {
     color: var(--grey)
 }
 
-.chart {
-    position: relative;
-    left: 10%;
-}
-
-.chartBox {
-    width: 900px;
-    height: 350px;
-}
 
 @keyframes fade {
     from { opacity: 0 }
@@ -389,6 +401,16 @@ body {
 .tch-modal, .sdcch-modal, .callDrop-modal, .callConnect-modal {
     display: none;
     animation: fade 0.5s ease-in;
+}
+
+.chart {
+    position: relative;
+    left: 10%;
+}
+
+.chartBox {
+    width: 900px;
+    height: 350px;
 }
 
 .graphBox {
