@@ -126,7 +126,7 @@ body {
 .content_data {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     gap: 30px;
     /*padding-right: 50px;*/
 }
