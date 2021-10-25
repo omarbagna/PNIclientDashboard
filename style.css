@@ -78,7 +78,7 @@ body {
 
 .topbar {
     height: 90px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     /*margin: 0 auto;*/
@@ -93,12 +93,12 @@ body {
 
 /* MAIN CONTENT STYLE */
 .main {
-    height: 88vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 90px;
     /*left: 80px;*/
-    margin-left: 50px;
+    padding-left: 50px;
     box-sizing: border-box; 
 }
 
@@ -119,14 +119,16 @@ body {
 .content {
     display: grid;
     grid-template-columns: 0.8fr 3.2fr;
+    width: 95%;
     gap: 30px;
 }
 
 .content_data {
     display: flex;
     flex-direction: column;
+    width: 95%;
     gap: 30px;
-    margin-right: 80px;
+    padding-right: 50px;
 }
 
 
