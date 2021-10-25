@@ -196,6 +196,7 @@ body {
 .monitoring_bar h4 {
     color: var(--grey);
     margin-left: 20px;
+    margin-bottom: 30px;
 }
 
 .monitoring_bar .btn-row {
