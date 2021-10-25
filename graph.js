@@ -25,6 +25,8 @@ const tchConfig = {
     type: 'line',
     data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true,
@@ -43,6 +45,8 @@ const sdcchConfig = {
     type: 'bar',
     data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true,
@@ -61,6 +65,8 @@ const callDropConfig = {
     type: 'line',
     data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true,
@@ -79,6 +85,8 @@ const callConnectConfig = {
     type: 'bar',
     data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true,
