@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+   
+    <title>PNI Dashboard</title>
+ 
+</head>
+<body>
+    
+    <div class="topbar white card"><img src="assets/images/logoPNI.png" alt="" class="logo"></div>
+    <div class="main">
+        <div class="header">
+            <h1>RPM System Analytics</h1>
+        </div>
+        <div class="content">
+            <div class="sidebar white card">
+                <h4>MOBILE TECHNOLOGY</h4>
+
+                <a href="#" class="btn btn-primary"><span>2G TECHNOLOGY</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
+                <a href="#" class="btn "><span>3G TECHNOLOGY</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
+                <a href="#" class="btn "><span>4G TECHNOLOGY</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
+            </div>
+            
+            <div class="content_data">
+                
+                <div class="monitoring_bar white card">
+                    <h4>MONITORING PERIOD</h4>
+                    <div class="btn-row">
+                        <ul class="btn period">
+                            <li><a href="#" class="day ">DAY</a></li>
+                            <li><a href="#" class="week ">WEEK</a></li>
+                            <li><a href="#" class="month select-primary">MONTH</a></li>
+                            <li><a href="#" class="year ">YEAR</a></li>
+                        </ul>
+                        <div class="time-frame btn">
+                            <i class='bx bxs-customize'></i><input type="text" name="report-period" value="01/01/2021 - 11/15/2021">
+                        </div>
+                        <div class="report_download">
+                            <a href="#" class="btn">
+                                <p class="main-text">DOWNLOAD</p>
+                                <p class="subtext">REPORT</p>
+                                <i class='bx bx-dots-vertical-rounded righty'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="smaller_cards">
+                    <div class="smaller white card tch-card" id="tch-card">
+                        <p class="text">TCH <br>CONGESTION</p>
+                        <p class="number">0,03</p>
+                        <p class="subtext">National <br>Level</p>
+                        <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="assets/images/graphSketch.svg" alt="">
+                    </div>
+                    <div class="smaller white card sdcch-card">
+                        <p class="text">SDCCH <br>CONGESTION</p>
+                        <p class="number">0,04</p>
+                        <p class="subtext">National <br>Level</p>
+                        <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="assets/images/graphSketch.svg" alt="">
+                    </div>
+                    <div class="smaller white card callDrop-card">
+                        <p class="text">CALL DROP <br>RATE</p>
+                        <p class="number">0,13</p>
+                        <p class="subtext">National <br>Level</p>
+                        <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="assets/images/graphSketch.svg" alt="">
+                    </div>
+                    <div class="smaller white card callConnect-card">
+                        <p class="text">CALL CONNECTION <br>SUCCESS RATE</p>
+                        <p class="number">99.25%</p>
+                        <p class="subtext">National <br>Level</p>
+                        <i class='bx bxs-up-arrow green_arr'></i>
+                        <img src="assets/images/graphSketch.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="content_table1 white card">
+                    <h3>GERAN 2G KPIs</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td><h4>Region</h4></td>
+                                <td><h4>SDCCH <br>CONGESTION</h4></td>
+                                <td><h4>TCH <br>CONGESTION</h4></td>
+                                <td><h4>CALL DROP RATE</h4></td>
+                                <td><h4>CALL CONNECTION <br>SUCCESS RATE</h4></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>HhoHho</span></td>
+                                <td>0.13<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>0.21<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>0.01<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>99.85%</td>
+                            </tr>
+                            <tr>
+                                <td><span>Manzini</span></td>
+                                <td>0.18<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>0.84<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>0.38<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>99.82%</td>
+                            </tr>
+                            <tr>
+                                <td><span>Shiselweni</span></td>
+                                <td>0.57<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>0.01<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>3.02<i class='bx bxs-down-arrow red_arr'></i></td>
+                                <td>99.29%</td>
+                            </tr>
+                            <tr>
+                                <td><span>Lubombo</span></td>
+                                <td>2.81<i class='bx bxs-down-arrow red_arr'></i></td>
+                                <td>0.45<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>0.82<i class='bx bxs-up-arrow green_arr'></i></td>
+                                <td>99.02%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content_table2 white card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td><h3>ALARMS</h3></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><h3>2G KPIs</h3></td>
+                                <td><h3>OCCURRENCES</h3></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>SDCCH CONGESTION</td>
+                                <td>362</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>DOWNTIME FOR RADIO ACCESS</td>
+                                <td>62</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>CALL DROP RATE</td>
+                                <td>37</td> 
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>CALL CONNECTION SUCCESS RATE</td>
+                                <td>368</td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="graphAlert white">
+                        <h4>DEGRADATIONS</h4>
+                        <div class="graphAlert_content white">
+                            <table>
+                                <tbody>
+                                    <tr class="critical">
+                                        <td class="critical_graphText">Critical</td>
+                                        <td class="critical_graphNumber">27%</td>
+                                        <td class="critical_graphFigure"></td>
+                                    </tr>
+                                    <tr class="minor">
+                                        <td class="minor_graphText">Minor</td>
+                                        <td class="minor_graphNumber">58%</td>
+                                        <td class="minor_graphFigure"></td>
+                                    </tr>
+                                    <tr class="major">
+                                        <td class="major_graphText">Major</td>
+                                        <td class="major_graphNumber">15%</td>
+                                        <td class="major_graphFigure"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-position">
+        <div class="tch-modal card modal">
+            <i class='bx bx-exit closeBtn'></i>
+            <h4>TCH CONGESTION CHART</h4>
+            <div class ="chartBox">
+                <canvas id="tch-graph" class="chart" aria-label="TCH Chart" role="tch_graph"></canvas>
+            </div>
+        </div>
+
+        <div class="sdcch-modal card modal">
+            <i class='bx bx-exit closeBtn'></i>
+            <h4>SDCCH CONGESTION CHART</h4>
+            <div class ="chartBox">
+                <canvas id="sdcch-graph" class="chart" aria-label="SDCCH Chart" role="sdcch_graph"></canvas>
+            </div>
+        </div>
+
+        <div class="callDrop-modal card modal">
+            <i class='bx bx-exit closeBtn'></i>
+            <h4>CALL DROP RATE CHART</h4>
+            <div class ="chartBox">
+                <canvas id="callDrop-graph" class="chart" aria-label="Call Drop Rate Chart" role="callDrop_graph"></canvas>
+            </div>
+        </div>
+
+        <div class="callConnect-modal card modal">
+            <i class='bx bx-exit closeBtn'></i>
+            <h4>CALL CONNECTION SUCCESS RATE CHART</h4>
+            <div class ="chartBox">
+                <canvas id="callConnect-graph" class="chart" aria-label="Call Connection Chart" role="callConnect_graph"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="assets/js/interaction.js"></script>
+    <script type="text/javascript" src="assets/js/graph.js"></script>
+   <script type="text/javascript" src="assets/js/calendar.js"></script>
+</body>
+</html>
