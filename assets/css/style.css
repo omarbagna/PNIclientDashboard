@@ -16,7 +16,7 @@
     --green: #72ebba;
     --black: #19193e;
     --red: #ff2d2e;
-    --yellow: #ffa63f;
+    --yellow: #ffcc00;
 }
 
 html {
@@ -104,9 +104,22 @@ body {
 /* TITLE  TEXT STYLE */
 .header {
     display: flex;
-    height: 105px;
+    height: 150px;
     width: 100%;
     align-items: center;
+    gap: 80px;
+}
+
+.header .btn {
+    width: 200px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header .btn:hover, .header .btnSelected {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--blue);
 }
 
 .header h1 {
@@ -133,7 +146,7 @@ body {
 /* SIDE MENU */
 .sidebar {
     width: 100%;
-    height: 80px;
+    height: 100px;
     padding: 20px;
     display: flex;
     background: var(--blue);
@@ -169,7 +182,8 @@ body {
 
 .sidebar .btn {
     background: var(--blue);
-    border: 1px solid var(--grey);
+    color: var(--white);
+    border: 1px solid var(--white);
     width: 200px;
 }
 
@@ -378,7 +392,7 @@ body {
     padding: 25px;
     color: var(--blue);
     font-size: 15px;
-    box-shadow: 0 0 400px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 800px rgba(0, 0, 0, 1);
 }
 
 .modal h4 {
