@@ -17,7 +17,12 @@
 </head>
 <body>
     
-    <div class="topbar white card"><img src="assets/images/logoPNI.png" alt="" class="logo"></div>
+    <div class="topbar white card">
+        <img src="assets/images/logoPNI.png" alt="" class="logo">
+        <div class="logoCircle">
+            <img src="assets/images/mtnLogo.jpg" alt="" class="logoOperator">
+        </div>
+    </div>
     <div class="main">
         <div class="header">
             <h1>RPM System Analytics</h1>
@@ -28,9 +33,9 @@
             <div class="sidebar white card">
                 <h4>MOBILE TECHNOLOGY</h4>
 
-                <a href="#" class="btn btn-primary"><span>GERAN 2G</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
-                <a href="#" class="btn "><span>UTRAN 3G</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
-                <a href="#" class="btn "><span>LTE 4G</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
+                <a href="#" id="geranBtn" class="btn "><span>GERAN 2G</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
+                <a href="#" id="utranBtn" class="btn "><span>UTRAN 3G</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
+                <a href="#" id="lteBtn" class="btn "><span>LTE 4G</span><i class='bx bx-dots-vertical-rounded righty'></i></a>
             </div>
             
             <div class="content_data">
@@ -57,84 +62,100 @@
                     </div>
                 </div>
                 
-                <div class="smaller_cards">
+                <div class="smaller_cards" id="smaller_cards">
                     <div class="smaller white card tch-card" id="tch-card">
-                        <p class="text">TCH <br>CONGESTION</p>
-                        <p class="number">0,03</p>
+                        <p class="text" id="national-card-one-text"></p>
+                        <p class="number" id="national-card-one-number"></p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
                         <img src="assets/images/graphSketch.svg" alt="">
                     </div>
                     <div class="smaller white card sdcch-card">
-                        <p class="text">SDCCH <br>CONGESTION</p>
-                        <p class="number">0,04</p>
+                        <p class="text" id="national-card-two-text"></p>
+                        <p class="number" id="national-card-two-number"></p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
                         <img src="assets/images/graphSketch.svg" alt="">
                     </div>
                     <div class="smaller white card callDrop-card">
-                        <p class="text">CALL DROP <br>RATE</p>
-                        <p class="number">0,13</p>
+                        <p class="text" id="national-card-three-text"></p>
+                        <p class="number" id="national-card-three-number"></p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
                         <img src="assets/images/graphSketch.svg" alt="">
                     </div>
                     <div class="smaller white card callConnect-card">
-                        <p class="text">CALL CONNECTION <br>SUCCESS RATE</p>
-                        <p class="number">99.25%</p>
+                        <p class="text" id="national-card-four-text"></p>
+                        <p class="number" id="national-card-four-number"></p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
                         <img src="assets/images/graphSketch.svg" alt="">
                     </div>
                 </div>
 
-                <div class="content_table1 white card">
-                    <h3>GERAN 2G KPIs</h3>
-                    <table>
+                <!--==========REGIONAL TABLE DATA===================-->
+                <div class="content_table1 white card geran2g-table" id="regional-data">
+                    
+                    <h3 id="region-table-data-title"></h3>
+                    <table id="region-table">
                         <thead>
                             <tr>
                                 <td><h4>Region</h4></td>
-                                <td><h4>SDCCH <br>CONGESTION</h4></td>
-                                <td><h4>TCH <br>CONGESTION</h4></td>
-                                <td><h4>CALL DROP RATE</h4></td>
-                                <td><h4>CALL CONNECTION <br>SUCCESS RATE</h4></td>
+                                <td><h4 id="region-table-data-column1-title"></h4></td>
+                                <td><h4 id="region-table-data-column2-title"></h4></td>
+                                <td><h4 id="region-table-data-column3-title"></h4></td>
+                                <td><h4 id="region-table-data-column4-title"></h4></td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span>HhoHho</span></td>
-                                <td>0.13<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>0.21<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>0.01<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>99.85%</td>
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><span>Manzini</span></td>
-                                <td>0.18<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>0.84<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>0.38<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>99.82%</td>
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><span>Shiselweni</span></td>
-                                <td>0.57<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>0.01<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>3.02<i class='bx bxs-down-arrow red_arr'></i></td>
-                                <td>99.29%</td>
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><span>Lubombo</span></td>
-                                <td>2.81<i class='bx bxs-down-arrow red_arr'></i></td>
-                                <td>0.45<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>0.82<i class='bx bxs-up-arrow green_arr'></i></td>
-                                <td>99.02%</td>
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="content_table2 white card">
-                    <table>
+                <div class="content_table2 white card geran2g-alarms" id="alarms-data">
+                    <table id="alarms-table">
                         <thead>
                             <tr>
                                 <td></td>
@@ -143,52 +164,53 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><h3>2G KPIs</h3></td>
+                                <td><h3 id="alarms-table-data-title"></h3></td>
                                 <td><h3>OCCURRENCES</h3></td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>SDCCH CONGESTION</td>
-                                <td>362</td>
+                                <td id="alarms-table-data-row1-text"></td>
+                                <td id="alarms-table-data-row1-number"></td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>DOWNTIME FOR RADIO ACCESS</td>
-                                <td>62</td>
+                                <td id="alarms-table-data-row2-text"></td>
+                                <td id="alarms-table-data-row2-number"></td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>CALL DROP RATE</td>
-                                <td>37</td> 
+                                <td id="alarms-table-data-row3-text"></td>
+                                <td id="alarms-table-data-row3-number"></td> 
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>CALL CONNECTION SUCCESS RATE</td>
-                                <td>368</td> 
+                                <td id="alarms-table-data-row4-text"></td>
+                                <td id="alarms-table-data-row4-number"></td> 
                             </tr>
                         </tbody>
                     </table>
+
                     <div class="graphAlert white">
                         <h4>DEGRADATIONS</h4>
                         <div class="graphAlert_content white">
-                            <table>
+                            <table id="degradation-table">
                                 <tbody>
                                     <tr class="critical">
                                         <td class="critical_graphText">Critical</td>
-                                        <td class="critical_graphNumber">27%</td>
-                                        <td class="critical_graphFigure"></td>
+                                        <td class="critical_graphNumber" id="criticalPercentage"></td>
+                                        
                                     </tr>
                                     <tr class="minor">
                                         <td class="minor_graphText">Minor</td>
-                                        <td class="minor_graphNumber">58%</td>
-                                        <td class="minor_graphFigure"></td>
+                                        <td class="minor_graphNumber" id="minorPercentage"></td>
+                                        
                                     </tr>
                                     <tr class="major">
                                         <td class="major_graphText">Major</td>
-                                        <td class="major_graphNumber">15%</td>
-                                        <td class="major_graphFigure"></td>
+                                        <td class="major_graphNumber" id="majorPercentage"></td>
+                                        
                                     </tr>
                                 </tbody>
                             </table>
@@ -196,10 +218,8 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </div>
-    
+               
+
     <div class="modal-position">
         <div class="tch-modal card modal">
             <i class='bx bx-exit closeBtn'></i>
@@ -234,7 +254,7 @@
         </div>
     </div>
 
-
+    <script type="text/javascript" src="assets/js/mtnData.js"></script>
     <script type="text/javascript" src="assets/js/interaction.js"></script>
     <script type="text/javascript" src="assets/js/graph.js"></script>
    <script type="text/javascript" src="assets/js/calendar.js"></script>
