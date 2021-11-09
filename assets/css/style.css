@@ -10,8 +10,9 @@
 
 :root {
     --white: #fff;
-    --blue: #4D1ED3;
-    --blue-alt: #6c3fe7;
+    --blue: #eb1c24;
+    --blue-partial: #ff13131f;
+    --blue-alt: #ad333e;
     --grey: #A3A3A3;
     --green: #72ebba;
     --black: #19193e;
@@ -90,6 +91,23 @@ body {
 .logo {
     height: 55px;
     width: 210px;
+}
+
+.logoCircle {
+    position: absolute;
+    right: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height:50px;
+    border-radius: 20%;
+}
+
+.logoOperator {
+    height: 100%;
+    width: 100%;
 }
 
 /* MAIN CONTENT STYLE */
@@ -438,6 +456,7 @@ body {
 
 
 /* TABLES FORMATTING */
+
 .content_table1, .content_table2 {
     display: flex;
     flex-direction: column;
@@ -473,13 +492,11 @@ table thead tr {
 }
 
 table tr td {
-    background: var(--white);
     padding: 12px 0;
 }
 
-table tbody span {
+table tbody .span {
     color: var(--blue);
-    background: var(--white);
 }
 
 
@@ -525,9 +542,16 @@ table tbody span {
 
 .graphAlert table {
     position: relative;
-    width: 70%;
+    width: 30%;
     top: 60px;
-    left: 20%;
+    left: 35%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+
+.graphAlert table:hover {
+    background: var(--blue-partial);
 }
 
 .graphAlert table td {
