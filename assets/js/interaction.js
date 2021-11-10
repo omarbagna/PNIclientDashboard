@@ -1,3 +1,4 @@
+
 // Select all main interactive components
 const menu = document.querySelectorAll('.sidebar a')
 const period = document.querySelectorAll('.period a')
@@ -6,12 +7,18 @@ const sdcchView = document.querySelector('.sdcch-card')
 const callDropView = document.querySelector('.callDrop-card')
 const callConnectView = document.querySelector('.callConnect-card')
 
+const alarmsPie = document.querySelector('#alarmsCharttrigger')
+const degradationPie = document.querySelector('#degradationCharttrigger')
+
 const closeMode = document.querySelectorAll('.closeBtn')
 const mainModal = document.querySelector('.modal-position')
 const modalTCH = document.querySelector('.tch-modal')
 const modalSDCCH = document.querySelector('.sdcch-modal')
 const modalCALLdrop = document.querySelector('.callDrop-modal')
 const modalCALLconnect = document.querySelector('.callConnect-modal')
+
+const modalAlarms = document.querySelector('.alarms-modal')
+const modalDegradation = document.querySelector('.degradation-modal')
 
 
 // Pass interactive commands to webpage
@@ -22,6 +29,8 @@ tchView.addEventListener('click', openTCHmodal)
 sdcchView.addEventListener('click', openSDCCHmodal)
 callDropView.addEventListener('click', openCALLDROPmodal)
 callConnectView.addEventListener('click', openCALLCONNECTmodal)
+alarmsPie.addEventListener('click', openAlarmsmodal)
+degradationPie.addEventListener('click', openDegradationmodal)
 window.addEventListener('click',outsideClick)
 closeMode.forEach((item) => item.addEventListener('click',closeModal))
 
@@ -46,6 +55,8 @@ function closeModal(){
     modalSDCCH.style.display = 'none'
     modalCALLdrop.style.display = 'none'
     modalCALLconnect.style.display = 'none'
+    modalAlarms.style.display = 'none'
+    modalDegradation.style.display = 'none'
 }
 
 function outsideClick(e){
@@ -72,4 +83,14 @@ function openCALLDROPmodal(){
 function openCALLCONNECTmodal(){
     mainModal.style.zIndex = '10'
     modalCALLconnect.style.display = 'block'
+}
+
+function openAlarmsmodal(){
+    mainModal.style.zIndex = '10'
+    modalAlarms.style.display = 'block'
+}
+
+function openDegradationmodal(){
+    mainModal.style.zIndex = '10'
+    modalDegradation.style.display = 'block'
 }
