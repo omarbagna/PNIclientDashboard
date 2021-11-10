@@ -64,28 +64,28 @@
                 </div>
                 
                 <div class="smaller_cards" id="smaller_cards">
-                    <div class="smaller white card tch-card" id="tch-card">
+                    <div class="smaller white card " id="tch-card">
                         <p class="text" id="national-card-one-text"></p>
                         <p class="number" id="national-card-one-number"></p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
                         <img src="assets/images/graphSketch.svg" alt="">
                     </div>
-                    <div class="smaller white card sdcch-card">
+                    <div class="smaller white card">
                         <p class="text" id="national-card-two-text"></p>
                         <p class="number" id="national-card-two-number"></p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
                         <img src="assets/images/graphSketch.svg" alt="">
                     </div>
-                    <div class="smaller white card callDrop-card">
+                    <div class="smaller white card">
                         <p class="text" id="national-card-three-text"></p>
                         <p class="number" id="national-card-three-number"></p>
                         <p class="subtext">National <br>Level</p>
                         <i class='bx bxs-up-arrow green_arr'></i>
                         <img src="assets/images/graphSketch.svg" alt="">
                     </div>
-                    <div class="smaller white card callConnect-card">
+                    <div class="smaller white card">
                         <p class="text" id="national-card-four-text"></p>
                         <p class="number" id="national-card-four-number"></p>
                         <p class="subtext">National <br>Level</p>
@@ -109,6 +109,35 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr class="tch-card">
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="sdcch-card">
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="callDrop-card">
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="callConnect-card">
+                                <td class= "span"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <!--
                             <tr>
                                 <td class= "span"></td>
                                 <td></td>
@@ -123,79 +152,54 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td class= "span"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class= "span"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class= "span"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class= "span"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            -->
                         </tbody>
                     </table>
                 </div>
 
-                <div class="content_table2 white card geran2g-alarms" id="alarms-data">
-                    <table id="alarms-table">
-                        <thead>
-                            <tr>
-                                <td></td>
-                                <td><h3>ALARMS</h3></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><h3 id="alarms-table-data-title"></h3></td>
-                                <td><h3>OCCURRENCES</h3></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td id="alarms-table-data-row1-text"></td>
-                                <td id="alarms-table-data-row1-number"></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td id="alarms-table-data-row2-text"></td>
-                                <td id="alarms-table-data-row2-number"></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td id="alarms-table-data-row3-text"></td>
-                                <td id="alarms-table-data-row3-number"></td> 
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td id="alarms-table-data-row4-text"></td>
-                                <td id="alarms-table-data-row4-number"></td> 
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="content_table2 geran2g-alarms" id="alarms-data">
+                    <div class="alarmsTable card" id="alarmsCharttrigger" >
+                        <table id="alarms-table">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td><h3>ALARMS</h3></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><h3 id="alarms-table-data-title"></h3></td>
+                                    <td><h3>OCCURRENCES</h3></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td id="alarms-table-data-row1-text"></td>
+                                    <td id="alarms-table-data-row1-number"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td id="alarms-table-data-row2-text"></td>
+                                    <td id="alarms-table-data-row2-number"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td id="alarms-table-data-row3-text"></td>
+                                    <td id="alarms-table-data-row3-number"></td> 
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td id="alarms-table-data-row4-text"></td>
+                                    <td id="alarms-table-data-row4-number"></td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                    <div class="graphAlert white">
+                    <div class="graphAlert card"  id="degradationCharttrigger">
                         <h4>DEGRADATIONS</h4>
-                        <div class="graphAlert_content white">
+                        <div class="graphAlert_content ">
                             <table id="degradation-table">
                                 <tbody>
                                     <tr class="critical">
@@ -251,6 +255,22 @@
             <h4>CALL CONNECTION SUCCESS RATE CHART</h4>
             <div class ="chartBox">
                 <canvas id="callConnect-graph" class="chart" aria-label="Call Connection Chart" role="callConnect_graph"></canvas>
+            </div>
+        </div>
+
+        <div class="alarms-modal card modal">
+            <i class='bx bx-exit closeBtn'></i>
+            <h4>ALARMS PIE</h4>
+            <div class ="chartBox">
+                <canvas id="alarms-pie" class="chart" aria-label="TCH Chart" role="tch_graph"></canvas>
+            </div>
+        </div>
+
+        <div class="degradation-modal card modal">
+            <i class='bx bx-exit closeBtn'></i>
+            <h4>DEGRADATIONS PIE</h4>
+            <div class ="chartBox">
+                <canvas id="degradation-pie" class="chart" aria-label="TCH Chart" role="tch_graph"></canvas>
             </div>
         </div>
     </div>
