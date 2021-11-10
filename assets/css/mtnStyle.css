@@ -351,13 +351,7 @@ body {
     padding: 30px;
     height: 250px;
     color: var(--black);
-    cursor: pointer;
     transition: 0.5s ease;
-}
-
-.smaller:hover {
-    color: var(--white);
-    background: var(--blue);
 }
 
 .smaller .text {
@@ -437,7 +431,9 @@ body {
     to { opacity: 1}
 }
 
-.tch-modal, .sdcch-modal, .callDrop-modal, .callConnect-modal {
+.tch-modal, .sdcch-modal, 
+.callDrop-modal, .callConnect-modal,
+.alarms-modal, .degradation-modal {
     display: none;
     animation: fade 0.5s ease-in;
 }
@@ -457,17 +453,11 @@ body {
 
 /* TABLES FORMATTING */
 
-.content_table1, .content_table2 {
+.content_table1 {
     display: flex;
     flex-direction: column;
     padding: 30px;
     justify-content: center;
-}
-
-.content_table2 {
-    margin-bottom: 50px;
-    flex-direction: row;
-    justify-content: flex-start;
 }
 
 .content_table1 h3, .content_table2 h3 {
@@ -478,9 +468,11 @@ body {
     margin-bottom: 10px;
 }
 
-.content_table1 h4, .content_table2 h4 {
-    background: var(--white);
+.content_table1 table tbody tr:hover {
+    cursor: pointer;
+    background: var(--blue-partial);
 }
+
 
 table {
     border-collapse: collapse;
@@ -501,6 +493,14 @@ table tbody .span {
 
 
 /* TABLE 2 TARGETED FORMATTING */
+
+.content_table2 {
+    display: grid;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
 .content_table2 table thead tr:last-child td:nth-child(2) h3 {
     text-align: left;
     color: var(--black);
@@ -532,25 +532,32 @@ table tbody .span {
 }
 
 
-/* MINI GRAPH IN TABLE 2 */
-.graphAlert {
-    width: 70%;
-    height: 100%;
+/* MINI PIE CHART IN TABLE 2 */
+.graphAlert, .alarmsTable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 100%;
     text-align: center;
     color: var(--grey);
 }
 
-.graphAlert table {
+.graphAlert h4 {
     position: relative;
-    width: 30%;
-    top: 60px;
-    left: 35%;
-    border-radius: 20px;
+    bottom: 60px;
+}
+
+.graphAlert table, .alarmsTable table {
+    width: 100%;
     cursor: pointer;
+    border-radius: 20px;
     transition: 0.5s ease-out;
 }
 
-.graphAlert table:hover {
+.graphAlert:hover, .alarmsTable:hover {
+    cursor: pointer;
     background: var(--blue-partial);
 }
 
